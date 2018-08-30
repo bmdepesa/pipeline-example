@@ -1,0 +1,20 @@
+name: test
+stages:
+- name: clone
+  steps:
+  - sourceCodeConfig:
+      branch: master
+      branchCondition: only
+      url: https://github.com/bmdepesa/pipeline-example.git
+- name: build
+  steps:
+  - runScriptConfig:
+      image: busybox:latest
+      isShell: true
+      shellScript: ls
+- name: publish
+  steps:
+  - publishImageConfig:
+      buildContext: .
+      dockerfilePath: ./Dockerfile
+      tag: pipeline/build:${CICD_EXECUTION_SEQUENCE}

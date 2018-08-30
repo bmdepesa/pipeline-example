@@ -4,7 +4,6 @@ stages:
   - runScriptConfig:
       image: busybox:latest
       shellScript: ls /dev/kvm
-    privileged: true
   - runScriptConfig:
       image: busybox:latest
       shellScript: ip addr

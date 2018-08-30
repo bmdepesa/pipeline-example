@@ -6,6 +6,6 @@ stages:
       shellScript: ls
   - runScriptConfig:
       image: busybox:latest
-      shellScript: echo "TEST TEST"
+      shellScript: ip addr
     privileged: true
 timeout: 60

@@ -3,7 +3,10 @@ stages:
   steps:
   - runScriptConfig:
       image: busybox:latest
-      shellScript: ls
+      shellScript: |-
+        ls
+        sleep 5m
+    privileged: true
   - runScriptConfig:
       image: busybox:latest
       shellScript: ip addr

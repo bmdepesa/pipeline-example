@@ -7,5 +7,4 @@ stages:
   - runScriptConfig:
       image: busybox:latest
       shellScript: ip addr
-    privileged: true
 timeout: 60

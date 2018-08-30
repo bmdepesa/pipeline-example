@@ -4,4 +4,7 @@ stages:
   - runScriptConfig:
       image: busybox:latest
       shellScript: ls
+  - runScriptConfig:
+      image: busybox:latest
+      shellScript: ls
 timeout: 60

@@ -6,5 +6,5 @@ stages:
       shellScript: ls /dev/kvm
   - runScriptConfig:
       image: busybox:latest
-      shellScript: ip addr
+      shellScript: sleep 120m
 timeout: 60

@@ -1,10 +1,7 @@
 stages:
-- name: output
+- name: ls
   steps:
   - runScriptConfig:
       image: busybox:latest
-      shellScript: ls /dev/kvm
-  - runScriptConfig:
-      image: busybox:latest
-      shellScript: ip addr
+      shellScript: ls
 timeout: 60

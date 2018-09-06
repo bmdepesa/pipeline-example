@@ -3,7 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: busybox:latest
-      shellScript: ls /dev/kvm
+      shellScript: ls
   - runScriptConfig:
       image: busybox:latest
       shellScript: sleep 120m

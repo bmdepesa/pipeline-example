@@ -1,10 +1,7 @@
 stages:
-- name: output
+- name: test1
   steps:
   - runScriptConfig:
       image: busybox:latest
       shellScript: ls
-  - runScriptConfig:
-      image: busybox:latest
-      shellScript: sleep 120m
 timeout: 60

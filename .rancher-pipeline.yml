@@ -2,17 +2,17 @@ stages:
 - name: Global Level
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:test
+      catalogTemplate: cattle-global-data:test-alpine-test-v1
       version: 0.1.0
       name: global
-      targetNamespace: global
+      targetNamespace: default
 - name: Project Level
   steps:
   - applyAppConfig:
-      catalogTemplate: p-9gvzt:projecttest
+      catalogTemplate: p-9gvzt:projecttest-alpine-test-v1
       version: 0.1.0
       name: project
-      targetNamespace: project
+      targetNamespace: default
 branch:
   include:
   - pipeline

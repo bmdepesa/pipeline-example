@@ -1,13 +1,19 @@
 stages:
-- name: test1
+- name: Global Level
   steps:
-  - runScriptConfig:
-      image: busybox:latest
-      shellScript: ls
-- name: test
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:test
+      version: 0.1.0
+      name: global
+      targetNamespace: global
+- name: Project Level
   steps:
-  - runScriptConfig:
-      image: busybox:latest
-      shellScript: ls
-timeout: 60
-notification: {}
+  - applyAppConfig:
+      catalogTemplate: p-9gvzt:projecttest
+      version: 0.1.0
+      name: project
+      targetNamespace: project
+branch:
+  include:
+  - pipeline
+  exclude:

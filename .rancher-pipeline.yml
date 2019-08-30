@@ -2,14 +2,14 @@ stages:
 - name: Global Level
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:test-alpine-test-v1
+      catalogTemplate: cattle-global-data:global-test-alpine-test-v1
       version: 0.1.0
       name: global
       targetNamespace: default
 - name: Project Level
   steps:
   - applyAppConfig:
-      catalogTemplate: p-9gvzt:projecttest-alpine-test-v1
+      catalogTemplate: p-zpgwh:project-test-alpine-test-v1
       version: 0.1.0
       name: project
       targetNamespace: default

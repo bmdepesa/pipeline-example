@@ -5,10 +5,12 @@ stages:
       path: ${chartpath}
       catalogTemplate: test-chart
       version: latest
-      gitUrl: https://github.com/bmdepesa/test-chart
+      gitUrl: http://github.com/bmdepesa/test-chart
       gitBranch: master
-      gitAuthor: chartpath
-      gitEmail: ./charts-test-path
+      gitAuthor: brandon-test
+      gitEmail: brandon@rancher.com
+    env:
+      chartpath: ./charts-test-path
     envFrom:
     - sourceName: test-secret
       sourceKey: USERNAME

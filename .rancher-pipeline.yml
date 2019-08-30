@@ -5,7 +5,7 @@ stages:
       path: ${chartpath}
       catalogTemplate: test-chart
       version: latest
-      gitUrl: http://github.com/bmdepesa/test-chart
+      gitUrl: https://github.com/bmdepesa/test-charts.git
       gitBranch: master
       gitAuthor: brandon-test
       gitEmail: brandon@rancher.com

@@ -1,17 +1,20 @@
 stages:
-- name: Global Level
+- name: publish
   steps:
-  - applyAppConfig:
-      catalogTemplate: cattle-global-data:global-test-alpine-test-v1
-      version: 0.1.0
-      name: global
-      targetNamespace: default
-- name: Project Level
-  steps:
-  - applyAppConfig:
-      catalogTemplate: p-zpgwh:project-test-alpine-test-v1
-      version: 0.1.0
-      name: project
-      targetNamespace: default
+  - publishCatalogConfig:
+      path: ${chartpath}
+      catalogTemplate: test-chart
+      version: latest
+      gitUrl: https://github.com/bmdepesa/test-chart
+      gitBranch: master
+      gitAuthor: chartpath
+      gitEmail: ./charts-test-path
+    envFrom:
+    - sourceName: test-secret
+      sourceKey: USERNAME
+      targetKey: USERNAME
+    - sourceName: test-secret
+      sourceKey: PASSWORD
+      targetKey: PASSWORD
 branch: {}
 notification: {}
